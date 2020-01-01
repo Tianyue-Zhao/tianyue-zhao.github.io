@@ -11,12 +11,13 @@
 .caption
 {
     display:block;
-    width:100%;
+    width:98%;
     bottom:0;
     position:relative;
     background-color:rgb(210,210,210);
     border-radius: 0 0 5px 5px;
     font-family: "Lucida Console","Times New Roman";
+    padding:1%;
 }
 
 #profile
@@ -32,10 +33,10 @@
 #intro
 {
     display:block;
-    height:50%;
+    height:40%;
     width:40%;
     left:50%;
-    top:10%;
+    top:7%;
     position:absolute;
     overflow:hidden;
 }
@@ -43,8 +44,8 @@
 #home-contents
 {
     display:block;
-    left:50%;
-    top:50%;
+    left:48%;
+    top:40%;
     width:50%;
     height:50%;
     position:absolute;
