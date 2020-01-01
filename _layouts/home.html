@@ -4,8 +4,15 @@
     {%- include head.html -%}
 
     <body>
+        {%- include header.html -%}
         <main class="page-content" aria-label="Content">
-        <div class="wrapper">
+        <div class="wrapper" id="profile">
+            <h2>Tianyue Zhao</h2>
+            <div class="img-wrapper">
+            <img src="/imgs/profile.jpeg" alt="Profile picture" style="height:100%">
+            </div>
+        </div>
+        <div class="wrapper" id="home-contents">
             <div class="home">
                 {%- if page.title -%}
                 <h1 class="page-heading">{{ page.title }}</h1>
