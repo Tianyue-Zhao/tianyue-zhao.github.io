@@ -35,14 +35,14 @@
   background-color: $background-color;
   border: 1px solid $brand-color-light;
   border-radius: 5px;
-  text-align: right;
+  text-align: left;
 
   .nav-trigger {
       display: none;
   }
 
   .menu-icon {
-    float: right;
+    float: left;
     width: 36px;
     height: 26px;
     line-height: 0;
@@ -56,7 +56,7 @@
 
   label[for="nav-trigger"] {
     display: block;
-    float: right;
+    float: left;
     width: 36px;
     height: 36px;
     z-index: 2;
@@ -88,7 +88,7 @@
 
   @media screen and (min-width: $on-medium) {
     position: static;
-    float: right;
+    float: left;
     border: none;
     background-color: inherit;
 

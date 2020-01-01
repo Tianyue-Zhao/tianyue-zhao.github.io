@@ -20,6 +20,14 @@
     padding:1%;
 }
 
+.links
+{
+    float:right;
+    display:inline-block;
+    position:relative;
+    height: 1.5em;
+}
+
 #profile
 {
     display:block;
