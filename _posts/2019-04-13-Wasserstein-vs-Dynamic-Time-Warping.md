@@ -1,3 +1,6 @@
+---
+layout: post
+---
 ## Wasserstein distance vs Dynamic Time Warping
 In my internship with UCSF Neuroscape lab, I was faced with an important question: is there any difference between Dynamic Time Warping and the Wasserstein metric applied on one-dimensional (time series) data? The end-goal here is to find an algorithm that could reliably determine how similar the body motion of an older adult is to young adults, but this question of DTW vs. Wasserstein applies to all time series comparison problems.
 

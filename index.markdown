@@ -4,3 +4,7 @@
 
 layout: home
 ---
+    I am an undergrad at UCSD specializing
+    in mathematics and algorithms, currently
+    playing around with adversarial training
+    for the most part :)
