@@ -10,7 +10,7 @@
 
 .caption
 {
-    display:block;
+    display:none;
     width:98%;
     bottom:0;
     position:relative;
@@ -43,8 +43,8 @@
     display:block;
     height:40%;
     width:40%;
-    left:50%;
-    top:7%;
+    left:45%;
+    top:10%;
     position:absolute;
     overflow:hidden;
 }
@@ -52,8 +52,8 @@
 #home-contents
 {
     display:block;
-    left:48%;
-    top:40%;
+    left:43%;
+    top:50%;
     width:50%;
     height:50%;
     position:absolute;

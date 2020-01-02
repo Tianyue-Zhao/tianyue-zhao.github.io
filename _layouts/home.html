@@ -9,14 +9,13 @@
         <div class="wrapper" id="profile">
             <h2>Tianyue Zhao</h2>
             <div class="img-wrapper">
-                <img src="/imgs/profile.jpeg" alt="Profile picture" style="width:100%">
+                <img src="/imgs/profile.jpg" alt="Profile picture" style="width:100%">
                 <div class="caption">
                     <span>🤖    A man with a camera stands in front of a gray background, circa 2019</span>
                 </div>
             </div>
         </div>
         <div id="intro">
-            <h1>Hey there!</h1>
             {{ content }}
         </div>
         <div class="wrapper" id="home-contents">
@@ -28,7 +27,7 @@
                 {%- if site.posts.size > 0 -%}
                 <h3 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h3>
                 <ul class="post-list">
-                    {%- for post in site.categories["technical"] -%}
+                    {%- for post in site.posts -%}
                     <li>
                         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
                         <span class="post-meta">{{ post.date | date: date_format }}</span>
