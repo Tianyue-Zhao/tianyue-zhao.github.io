@@ -18,7 +18,7 @@
         </label>
 
         <div class="trigger">
-          <a class="page-link" href="home.html">Home</a>
+          <a class="page-link" href="/index.html">Home</a>
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title -%}
@@ -29,6 +29,10 @@
 
       </nav>
       <div class="links">
+          <a href="https://blog.csdn.net/utterly_bonkers">
+              <img src="/imgs/CSDN.png" alt="CSDN logo" style="height:0.75em">
+          </a>
+          &nbsp;
           <a href="https://github.com/Tianyue-Zhao">
               <img src="/imgs/Github.png" alt="Github logo" style="height:100%">
           </a>
