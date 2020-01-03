@@ -28,6 +28,11 @@
     height: 1.5em;
 }
 
+.inline-image
+{
+    text-align:center;
+}
+
 #profile
 {
     display:block;

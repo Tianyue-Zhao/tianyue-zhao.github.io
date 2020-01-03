@@ -5,8 +5,10 @@ Android does not offer remote shell access natively, yet it is possible to achie
 
 ### Install Termux and Termux:API
 Both apps are open source and freely available on the Play Store. Termux is the Linux emulator itself, while Termux:API allows for command-line access of the phone's hardware features.
-![Termux app](/imgs/2-1.jpg)
-![Termux API app](/imgs/2-2.jpg)
+<div class="inline-image">
+<img src="/imgs/2-1.jpg" height="250" alt="Termux app">
+<img src="/imgs/2-2.jpg" height="250" alt="Termux API app">
+</div>
 Make sure camera permission is granted for the Termux:API app.
 
 ### Enable SSH
@@ -25,7 +27,9 @@ On the phone, copy the public key into authorized_keys
 ```
 vi authorized_keys
 ```
-![Authorized keys file](/imgs/2-5.jpg)
+<div class="inline-image">
+<img src="/imgs/2-5.jpg" height="350" alt="Authorized keys file">
+</div>
 If you are unfamiliar with the vi editor, press i before pasting, and then esc to exit editing mode, before entering :wq to exit the editor.
 Now, the computer has authorization to access Termux remotely.
 ### Test the connection
@@ -47,6 +51,8 @@ sftp -P 8022 u0_a213@10.0.0.244
 ### Automating
 Now, we compact the SSH and SFTP retrieval process into a shellscript.
 
+![Auto retrieval script](/imgs/2-7.png)
+
 \* Here's a [guide on Termux SSH](https://glow.li/technology/2015/11/06/run-an-ssh-server-on-your-android-with-termux/) that helped me a lot.
 
 ## FTP server method
@@ -54,12 +60,15 @@ If manually taking the picture with the phone is an option, then an FTP script c
 ### Install an FTP server app
 In this configuration, the phone acts as an FTP server, and an application should be installed accordingly.
 I personally use this one:
-![FTP server app](/imgs/2-4.jpg)
+<div class="inline-image">
+<img src="/imgs/2-4.jpg" height="200" alt="FTP server app">
+</div>
 ### Configure the FTP app
 The process may vary between apps, but in general, three things should be set up before the app is ready.
 * The port number to run on
 * The login username and password
 * The desired keep-alive time for the connection
+
 ### Python script
 Most programming languages provide libraries for the FTP protocol, but I'll use Python as an example here.
 The documentation for Python's ftplib is [here](https://docs.python.org/3/library/ftplib.html).
@@ -68,4 +77,5 @@ Generally, the Python script to perform the retrieval consists of four steps:
 2. Log in to the FTP server of the phone
 3. List the contents of the desired directory
 4. Perform the retrieval on the specified file
+![Python download script](/imgs/2-6.png)
 
