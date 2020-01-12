@@ -1,3 +1,6 @@
+---
+comments: true
+---
 Oftentimes, it could be convenient to transfer images from a phone to a computer via a script (or vise versa). An example would be a real-time computer vision demo that uses the phone's camera, but performs the computations elsewhere. Despite the relatively enclosed nature of mobile operating systems, there are two methods that work relatively well for Android phones.
 
 ## Termux & SSH method
