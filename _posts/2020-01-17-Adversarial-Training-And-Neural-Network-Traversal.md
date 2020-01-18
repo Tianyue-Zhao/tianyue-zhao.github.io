@@ -24,7 +24,7 @@ The process of generating an adversarial example and traversal is nearly the sam
 With adversarial training, we still need the image to adhere to the original label, and so we must limit by how much we can manipulate the image. In this post, this is done with an L2 norm, along with [Projected Gradient Descent](http://niaohe.ise.illinois.edu/IE598_2016/pdf/IE598-lecture10-projected%20gradient%20descent.pdf). In short, PGD conducts a step of gradient descent without regard to the L2 constraint, and then projects the resulting example to the closest example that does satisfy the constraint. When conducting traversal, no such constraint is necessary.
 
 ## Results
-**In large, the robust network displayed much better performance, and traversal is nearly realistic in some examples. However, performance is inconsistent, and most examples still suffer from large amounts of noise. There is still a long way to go.**
+**In large, the robust network displayed much better performance, and traversal is nearly realistic in some examples. However, performance is inconsistent, and most examples still suffer from large amounts of noise. There is still a long way to go.**Traversal does not make for any applications in MNIST, yet the performance of traversal should generalize well to other networks, such as COCO classification, on which traversal could offer many real-world uses.
 
 <!--Video: L2 No. 13, 5 to 0    Non-adversarial No. 14, 5 to 0-->
 <div class="side-by-side">
@@ -42,7 +42,8 @@ With adversarial training, we still need the image to adhere to the original lab
 
 As seen in the video above, the traversal process is indeed much more successful in the adversarially robust Neural Network. By frame 130, the traversal had removed the distinguishing features of the number 5, and produced a recognizeable 0, a notable success. The noise became more pronounced as the traversal continued to run, likely because the gradient lacks non-linear terms that allow it to actually converge at a certain point. In comparison, one could argue that the non-robust network produces a very rough 0 by frame 150, but the noise is much more pronounced and random, making the image unrealistic. It is then fair to conclude that adversarial training does have a positive effect on traversal performance, mainly in terms of taming the noise that often appears.
 
-However, the general performance of the robust network is still inconsistent and unexceptional. The level of success heavily depends on factors such as the position of the target image in the frame, the type of digit starting from, and so on. For the videos below, the 2 to 0 transition on the left is able to completely eliminate the 2's distinguishing features, while the right video largely fails, likely due to the position of the digit.
+However, the general performance of the robust network is still inconsistent. The level of success heavily depends on factors such as the position of the target image in the frame, the type of digit starting from, and so on. For the videos below, the 2 to 0 transition on the left is able to completely eliminate the 2's distinguishing features, while the right video largely fails, likely due to the position of the digit. Transitioning to 0 from digits like 5, 6, and 8 works well, while
+transitioning from 4 to 0 generally produces bad results, since the two digits are not alike to begin with.
 
 <!--Video: L2 No. 38    L2 No. 33-->
 <div class="side-by-side">
@@ -58,7 +59,31 @@ However, the general performance of the robust network is still inconsistent and
 </div>
 </div>
 
-Traversal performance clearly has a long way to go, with changes in architecture and training method possibly bringing further improvements. For example, a certain shortcoming is how adversarial training produces the most effect in a small "radius": as the original label for each example must stay true, we can only perturb each image so much in adversarial training, and this would only produce the best effect in the initial stages of the traversal.
+Traversal performance clearly has a long way to go, but it has much potential, with changes in architecture and training method possibly bringing further improvements. For example, a certain shortcoming is how adversarial training produces the most effect in a small "radius": as the original label for each example must stay true, we can only perturb each image so much in adversarial training, and this would only produce the best effect in the initial stages of the traversal.
 
 For further reference, several other random examples from the robust network are displayed below.
-
+<!--Video: L2 00-03-->
+<div class="side-by-side">
+<div class="side-left">
+<video width="100%" height="100%" controls>
+    <source src="/imgs/3-5.mp4"/>
+</video>
+</div>
+<div class="side-right">
+<video width="100%" height="100%" controls>
+    <source src="/imgs/3-6.mp4"/>
+</video>
+</div>
+</div>
+<div class="side-by-side">
+<div class="side-left">
+<video width="100%" height="100%" controls>
+    <source src="/imgs/3-7.mp4"/>
+</video>
+</div>
+<div class="side-right">
+<video width="100%" height="100%" controls>
+    <source src="/imgs/3-8.mp4"/>
+</video>
+</div>
+</div>
