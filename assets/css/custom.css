@@ -25,12 +25,36 @@
     float:right;
     display:inline-block;
     position:relative;
-    height: 1.5em;
+    height:1.5em;
 }
 
 .inline-image
 {
     text-align:center;
+}
+
+.side-by-side
+{
+    position:relative;
+    display:inline-block;
+    height:400px;
+    width:100%;
+}
+
+.side-left
+{
+    position:absolute;
+    left:0;
+    height:100%;
+    width:50%;
+}
+
+.side-right
+{
+    position:absolute;
+    right:0;
+    height:100%;
+    width:50%;
 }
 
 #profile
