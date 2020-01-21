@@ -11,16 +11,18 @@
       <div class="wrapper">
         {{ content }}
 
+        {%- for link in site.data.links -%}
         <div class="list-item">
-            <a href="https://tianyue-zhao.github.io" target="_blank">
+            <a href="{{ link.address }}" target="_blank">
                 <div class="list-title">
-                    Test
+                    {{ link.title }}
                 </div>
             </a>
             <div class="list-details">
-                Very interesting research on variational autoencoders
+                {{ link.description }}
             </div>
         </div>
+        {%- endfor -%}
 
         {% if page.comments %}
         <div id="disqus_thread"></div>
