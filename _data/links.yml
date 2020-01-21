@@ -1,0 +1,7 @@
+- title: Lex Fridman's DL State Of The Art 2020 video
+  address: https://youtu.be/0VH1Lim8gL8
+  description: An hour-long video summarizing the advances of ML in 2019, as well as some directions for 2020.
+
+- title: Post on Variational Autoencoders
+  address: http://kvfrans.com/variational-autoencoders-explained/
+  description: A very well-written and easy-to-understand post explaining the principle and purpose of Variational Autoencoders
