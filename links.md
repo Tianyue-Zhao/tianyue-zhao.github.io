@@ -1,4 +1,4 @@
 ---
 layout: links
-title: Resources
+title: Bookmarks
 ---

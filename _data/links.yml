@@ -2,10 +2,14 @@
   address: https://youtu.be/0VH1Lim8gL8
   description: An hour-long video summarizing the advances of ML in 2019, as well as some directions for 2020. Covers various topics from changes in ML frameworks to research breakthroughs.
 
-- title: Solving math with Deep Learning
-  address: https://arxiv.org/abs/1912.01412
-  description: Fun paper on solving math problems - such as differential equations - with the powers of deep learning. This is actually *solving* the problems, not relying on things like gradient descent.
+- title: Deep Learning with Bayesian Principles
+  address: https://www.youtube.com/watch?v=2wFb46Q8kmA
+  description: NIPS 2019 workshop on combining DL and Bayesian models. Clarifies the conceptual differences, and introduces exciting ways to add Bayes to DL - e.g. uncertainty estimation in DL classifiers by using a more global view.
 
 - title: Post on Variational Autoencoders
   address: http://kvfrans.com/variational-autoencoders-explained/
   description: A very well-written and easy-to-understand post explaining the principle and purpose of Variational Autoencoders.
+
+- title: Solving math with Deep Learning
+  address: https://arxiv.org/abs/1912.01412
+  description: Fun paper on solving math problems - such as differential equations - with the powers of deep learning. This is actually *solving* the problems, not relying on things like gradient descent.
